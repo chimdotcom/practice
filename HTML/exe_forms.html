@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="first.css">
+</head>
+<body>
+   <br>
+    <a href="exe_images.html" target="_self">Images</a><br>
+    <a href="exe_forms.html" target="_self">Forms</a><br>
+    <br>
+
+    <div>
+        <form action="/process.php" method="get">
+
+            <div>
+                <label> Class(readonly) </label><br>
+                <input type="text" id="fullnamereadonly" name="fullname" value="Web Development" readonly><br>
+            </div>
+            <br>
+
+            <div>
+                <label for="fullnamehidden">Class code (hidden fom field)</label><br>
+                <input type="fullnamehidden" id="fullnamehidden" namme="fullname" value="WEB1" readonly><br>
+            </div>
+            <br>
+
+            <div>
+                <label for="fullname">Your full name</label><br>
+                <input type="fullname" id="fullname" name="fullname" placeholder="Enter name" required><br>
+            </div>
+            <br>
+
+            <div>
+                <label for="email">Enter your email</label><br>
+                <input type="email" id="email" name="email" placeholder="Enter email" required><br>
+            </div>
+            <br>
+
+            <div>
+                <label>Enter your password(required)></label><br>
+                <input type="password" id="password" name="password" placeholder="Enter your password"><br>
+            </div>
+            <br>
+
+            <div>
+                <label for="number">Enter your number</label><br>
+                <input type="number" id="number" name="number" placeholder="Enter your number" required><br>
+            </div>
+            <br>
+
+            <div>
+                <label for="date">Enter the date</label><br>
+                <input type="date" id="date" name="date"><br>
+            </div>
+            <br>
+
+            <div>
+                <label for="time">Enter the time</label><br>
+                <input type="time" id="time" name="time"><br>
+            </div>
+            <br>
+
+            <div>
+                <label for="color">Select a colour</label><br>
+                <input type="color" id="color" name="color"><br>
+            </div>
+            <br>
+
+            <div>
+                <label for="url">Input url link</label><br>
+                <input type="url" id="url" name="url"><br>
+            </div>
+            <br>
+
+            <div>
+                <label for="gender">Gender(radio type)</label><br>
+                <input type="radio" id="male" name="gender" value="male"> <label for="male">Male</label> <br>
+                <input type="radio" id="female" name="gender" value="female"> <label for="female">Female</label> <br>
+                <input type="radio" id="others" name="gender" value="others"> <label for="others">Others</label> <br>
+            </div>
+            <br>
+
+            <div>
+                <label for="marital status">Marital Status</label><br>
+                <input type="radio" id="single" name="marital status" value="single"> <label for="single">Single</label> <br>
+                <input type="radio" id="married" name="marital status" value="married"> <label for="married">Married</label> <br>
+            </div>
+            <br>
+
+            <div>
+                <label for="current educational level">Educational Levels</label><br>
+                <input type="checkbox" id="primary school" name="Educational Levels" value="primary school"> <label for="primary school">Primary School</label> <br>
+                <input type="checkbox" id="primary school" name="Educational Levels" value="Scenery school"> <label for="secondary school">Secondary School</label> <br>
+                <input type="checkbox" id="tetriary institution" name="Educational Levels" value="tetriary institution"> <label for="Tetriary Institution">Tetriary Institution</label> <br>
+                <input type="checkbox" id="Masters" name="Educational Levels" value="Masters"> <label for="Masters">Masters</label> <br>
+                <input type="checkbox" id="PhD" name="Educational Levels" value="PhD"> <label for="PhD">PhD</label> <br>
+            </div>
+            <br>
+
+            <div>
+                <label for="experience">Rate your experience on a scale of 1-10</label><br>
+                <input type="range" id="experience" name="experience" min="0" max="10" oninput="this.nextElementSibling.value=this.value">
+                    <output>0</output>
+                <br>
+            </div>
+            <br>
+
+            <div>
+                <label for="experience">Select one</label><br>
+                <select id="experience" name="experience">
+                    <option value="0">No experience</option><br>
+                    <option value="1">1 year</option>
+                    <option value="2">2 years</option>
+                    <option value="3">3 years</option>
+                </select>
+            </div>
+            <br>
+
+            <div>
+                <label for="fruit">Select multiple</label><br>
+                <select id="fruit" name="fruit[]" multiple>
+                    <option value="apple">Apple</option>
+                    <option value="grape">Grape</option>
+                    <option value="pineapple">Pineapple</option>
+                    <option value="strawberry">Strawberry</option>
+                </select>
+                <br>
+            </div>
+            <br>
+
+            <div>
+                <label for="browser">Choose your desired browser</label><br>
+                <input list="browsers" name=" browser" id="browser">
+                <datalist id="browsers">
+                    <option value="Chrome">Chrome</option>
+                    <option value="Firefox">Firefox</option>
+                    <option value="Edge">Edge</option>
+                </datalist>
+                <br>
+            </div>
+            <br>
+
+            <div>
+                <label for="message">Enter your message</label><br>
+                <textarea id="textarea" name="w3review" rows="4" cols="24"></textarea><br>
+            </div>
+            <br>
+
+            <div>
+                <label for="file">Select a  file(options not recommended)</label><br>
+                <input ype="file" name="fullname" id="fullname name" accept="video/mp4, audio/mp3,"><br>
+            </div>
+            <br>
+
+            <div>
+                <label for="files"> You can select multiple files</label><br>
+                <input type="file" id="fullname" name="fullname[]" accept="image/png, image/jpg, image/jpeg, audio/mp3, doc, .docx, .xml" multiple><br>
+            </div>
+            <br>
+
+            <div>
+                <label for="image">Submit image</label><br>
+                <input type="image" size="100px" height="50px" src="" alt="submit"><br>
+            </div>
+            <br>
+
+            <div>
+                <label>(Submit) Buttons</label><br>
+                <input type="submit">
+                <button onclick="myjsfunctionOnclick()"
+                type="submit">Sign Up</button>
+                <button type="reset">Reset</button>
+            </div>
+            <br>
+    </form>
+
+
+</body>
+</html>
